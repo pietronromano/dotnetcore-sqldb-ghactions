@@ -200,3 +200,8 @@ az ad app federated-credential create --id $objectId --parameters credential.jso
 SQLADMIN_LOGIN pietronromano
 SQLADMIN_PASS Axml-xsl0123
 AZURE_SUBSCRIPTION_ID a2401ab8-bd17-453c-a13b-ae728a0271e9
+
+
+# Running the workflow
+## had to specify the project
+dotnet build DotNetCoreSqlDb.csproj
