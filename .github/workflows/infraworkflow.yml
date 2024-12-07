@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: repo
-          
+           
       # Deployment of template    
       - name: Deploy ARM Template resourcegroup
         uses: azure/arm-deploy@v1
