@@ -37,7 +37,7 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
-          dotnet build DotNetCoreSqlDb.csproj s--configuration Release 
+          dotnet build DotNetCoreSqlDb.csproj --configuration Release 
           dotnet publish -c Release -o myapp 
           
       # Deploy to Azure Web apps staging slot
