@@ -64,7 +64,7 @@ jobs:
           scope: resourcegroup
           subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{env.AZURE_RESOURCEGROUP_NAME}}
-          region: centralus # Set this to your target region
+          region: westeurope # Set this to your target region
           template: repo/templates/azuredeploy.json  # Set this to the location of your template file
           parameters: repo/templates/azuredeploy.parameters.json webappName=${{env.AZURE_WEBAPP_NAME}} aspName=${{env.ASP_NAME}} sqlServerName=${{env.SQLSERVER_NAME}} databaseName=${{env.DATABASE_NAME}} sqlAdminLogin=${{env.SQLADMIN_LOGIN}} sqlAdminPass=${{env.SQLADMIN_PASS}} # Set this to the location of your parameters file
  
