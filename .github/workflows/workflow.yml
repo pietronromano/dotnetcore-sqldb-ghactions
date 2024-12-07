@@ -11,12 +11,12 @@ on:
 #
 # 2. Change these variables for your configuration:
 env:
-  AZURE_WEBAPP_NAME: demo-webappsql-gh-actions-unique    # set this to your application's name
+  AZURE_WEBAPP_NAME: pnr-webappsql-gh-actions-unique    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '3.1'           # set this to the dot net version to use
-  AZURE_RESOURCEGROUP_NAME: demo-webappsql-gh-actions # set this to your preferred resource group name
-  SQLSERVER_NAME: demo-webappsql-gh-actions-srv                          # set this to your preferred sql server name
-  DATABASE_NAME: demo-webappsql-gh-actions-db                   # set this to your preferred sql database name
+  DOTNET_VERSION: '8.0'           # set this to the dot net version to use
+  AZURE_RESOURCEGROUP_NAME: pnr-webappsql-gh-actions # set this to your preferred resource group name
+  SQLSERVER_NAME: pnr-webappsql-gh-actions-srv                          # set this to your preferred sql server name
+  DATABASE_NAME: pnr-webappsql-gh-actions-db                   # set this to your preferred sql database name
   SQLADMIN_LOGIN: ${{ secrets.SQLADMIN_LOGIN  }}                # Create a secret in your Github repo for the SQL Admin login name you want to use
   SQLADMIN_PASS: ${{ secrets.SQLADMIN_PASS  }}                 # Create a secret in your Github repo for the SQL Admin password you want to use
   
@@ -37,7 +37,7 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
-          dotnet build --configuration Release
+          dotnet build DotNetCoreSqlDb.csproj s--configuration Release 
           dotnet publish -c Release -o myapp 
           
       # Deploy to Azure Web apps staging slot
