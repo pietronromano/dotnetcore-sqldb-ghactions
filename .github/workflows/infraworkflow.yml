@@ -17,6 +17,7 @@ env:
     SQLADMIN_LOGIN: ${{ secrets.SQLADMIN_LOGIN  }}                # Create a secret in your Github repo for the SQL Admin login name you want to use
     SQLADMIN_PASS: ${{ secrets.SQLADMIN_PASS  }}                 # Create a secret in your Github repo for the SQL Admin password you want to use
 
+# to avoid Error: Please make sure to give write permissions to id-token in the workflow.
 permissions:
   contents: read
   pages: write
