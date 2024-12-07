@@ -203,5 +203,6 @@ AZURE_SUBSCRIPTION_ID a2401ab8-bd17-453c-a13b-ae728a0271e9
 
 
 # Running the workflow
-## had to specify the project
-dotnet build DotNetCoreSqlDb.csproj
+## Changed .net to 8.0
+## had to specify the project, and rename the .sln file to something else
+dotnet build DotNetCoreSqlDb.csproj -p:configuration=Release
