@@ -1,6 +1,7 @@
 name: Create Azure Resources
 on: push
 
+# set to fire on any push
 #  push:
 #        paths: 
 #        - 'ARM/**'
@@ -16,6 +17,10 @@ env:
     SQLADMIN_LOGIN: ${{ secrets.SQLADMIN_LOGIN  }}                # Create a secret in your Github repo for the SQL Admin login name you want to use
     SQLADMIN_PASS: ${{ secrets.SQLADMIN_PASS  }}                 # Create a secret in your Github repo for the SQL Admin password you want to use
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
     build-and-deploy-to-dev:
