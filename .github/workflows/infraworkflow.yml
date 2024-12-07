@@ -1,11 +1,11 @@
 name: Create Azure Resources
-on: push
 
-# set to fire on any push
-#  push:
-#        paths: 
-#        - 'ARM/**'
-#        - '.github/workflows/infraworkflow.yml'
+# Just if workflow changed
+on:
+ push:
+      paths: 
+      - 'ARM/**'
+      - '.github/workflows/infraworkflow.yml'
 
 env:
     AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID  }}    # set this to your Azure Subscription Id
