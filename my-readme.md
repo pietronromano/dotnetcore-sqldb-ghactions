@@ -157,7 +157,7 @@ echo $tenantId
 
 subscriptionId="a2401ab8-bd17-453c-a13b-ae728a0271e9"
 echo $subscriptionId
-
+ 
 ## NOTE: removed first forward slash / after scope for this to work
 az role assignment create --role contributor --subscription $subscriptionId --assignee-object-id  $spId --assignee-principal-type ServicePrincipal --scope subscriptions/$subscriptionId/resourceGroups/$rg
 
